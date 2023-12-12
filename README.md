@@ -106,7 +106,7 @@ def sieve_of_eratosthenes(limit):
     return primes
 ```
 
-But how does it work? Well, it uses a similar factorization trick as that is used to determine if a single number is prime. It creates a boolean array and initially marks each number (except 0 and 1) of prime through the defined limit. It takes the defined upper limit (100,000 in this example) and only iterates through the square root of that limit. Starting at 2, it checks if the current number is prime. If that number is prime, it takes all multiples of that number and marks those as not prime (2 is prime, but 4, 6, 8, 10, 12, .., 99998, 100000 are all not prime). At the end of the loop, we have an array of prime numbers.
+But how does it work? Well, it uses a similar factorization trick as what is used to determine if a single number is prime. It creates a boolean array and initially marks each number (except 0 and 1) as prime through the defined limit. It takes the defined upper limit (100,000 in this example) and only iterates through the square root of that limit. Starting at 2, it checks if the current number is prime. If that number is prime, it takes all multiples of that number and marks those as not prime (2 is prime, but 4, 6, 8, 10, 12, .., 99998, 100000 are all not prime). At the end of the loop, we have an array of prime numbers. We can define the time complexity of this function as `O(n*log(log(n)))`. Much better!
 
 Let's find the time difference between these two approaches:
 ```
